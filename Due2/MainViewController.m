@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 WhatOSS. All rights reserved.
 //
 
+#import "AddTaskViewController.h"
 #import "MainViewController.h"
 
 @implementation MainViewController
@@ -13,6 +14,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"hey";
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showAddView)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -22,48 +26,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Flipside View Controller
-
-- (void)flipsideViewControllerDidFinish: (FlipsideViewController *)controller
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-    }
-}
-
 - (int)add:(int)firstNum plus:(int)secondNum
 {
     return firstNum + secondNum;
 }
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+- (void)showAddView
 {
-    self.flipsidePopoverController = nil;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showAlternate"]) {
-        [[segue destinationViewController] setDelegate:self];
-        
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-            UIPopoverController *popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
-            self.flipsidePopoverController = popoverController;
-            popoverController.delegate = self;
-        }
-    }
-}
-
-- (IBAction)togglePopover:(id)sender
-{
-    if (self.flipsidePopoverController) {
-        [self.flipsidePopoverController dismissPopoverAnimated:YES];
-        self.flipsidePopoverController = nil;
-    } else {
-        [self performSegueWithIdentifier:@"showAlternate" sender:sender];
-    }
+    AddTaskViewController *addTaskViewController = [[AddTaskViewController alloc] init];
+    [addTaskViewController setTitle:@"Add Task"];
+    [self.navigationController pushViewController:addTaskViewController animated:YES];
 }
 
 @end

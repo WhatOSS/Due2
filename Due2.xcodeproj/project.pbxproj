@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A139F0718D606E000E88B94 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A139F0618D606E000E88B94 /* AddTaskViewController.m */; };
 		8ABA130C18D5D46E007A7D99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA130B18D5D46E007A7D99 /* Foundation.framework */; };
 		8ABA130E18D5D46E007A7D99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA130D18D5D46E007A7D99 /* CoreGraphics.framework */; };
 		8ABA131018D5D46E007A7D99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA130F18D5D46E007A7D99 /* UIKit.framework */; };
@@ -16,7 +17,6 @@
 		8ABA131F18D5D46E007A7D99 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABA131D18D5D46E007A7D99 /* Main_iPhone.storyboard */; };
 		8ABA132218D5D46E007A7D99 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABA132018D5D46E007A7D99 /* Main_iPad.storyboard */; };
 		8ABA132518D5D46E007A7D99 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA132418D5D46E007A7D99 /* MainViewController.m */; };
-		8ABA132818D5D46E007A7D99 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABA132718D5D46E007A7D99 /* FlipsideViewController.m */; };
 		8ABA132A18D5D46E007A7D99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ABA132918D5D46E007A7D99 /* Images.xcassets */; };
 		8ABA133118D5D46E007A7D99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA133018D5D46E007A7D99 /* XCTest.framework */; };
 		8ABA133218D5D46E007A7D99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ABA130B18D5D46E007A7D99 /* Foundation.framework */; };
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A139F0518D606E000E88B94 /* AddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		8A139F0618D606E000E88B94 /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 		8ABA130818D5D46E007A7D99 /* Due2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Due2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABA130B18D5D46E007A7D99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8ABA130D18D5D46E007A7D99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,8 +52,6 @@
 		8ABA132118D5D46E007A7D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		8ABA132318D5D46E007A7D99 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		8ABA132418D5D46E007A7D99 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		8ABA132618D5D46E007A7D99 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
-		8ABA132718D5D46E007A7D99 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		8ABA132918D5D46E007A7D99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ABA132F18D5D46E007A7D99 /* Due2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Due2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ABA133018D5D46E007A7D99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -120,11 +120,11 @@
 				8ABA131A18D5D46E007A7D99 /* AppDelegate.h */,
 				8ABA131B18D5D46E007A7D99 /* AppDelegate.m */,
 				8ABA131D18D5D46E007A7D99 /* Main_iPhone.storyboard */,
+				8A139F0518D606E000E88B94 /* AddTaskViewController.h */,
+				8A139F0618D606E000E88B94 /* AddTaskViewController.m */,
 				8ABA132018D5D46E007A7D99 /* Main_iPad.storyboard */,
 				8ABA132318D5D46E007A7D99 /* MainViewController.h */,
 				8ABA132418D5D46E007A7D99 /* MainViewController.m */,
-				8ABA132618D5D46E007A7D99 /* FlipsideViewController.h */,
-				8ABA132718D5D46E007A7D99 /* FlipsideViewController.m */,
 				8ABA132918D5D46E007A7D99 /* Images.xcassets */,
 				8ABA131218D5D46E007A7D99 /* Supporting Files */,
 			);
@@ -259,8 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ABA131C18D5D46E007A7D99 /* AppDelegate.m in Sources */,
+				8A139F0718D606E000E88B94 /* AddTaskViewController.m in Sources */,
 				8ABA132518D5D46E007A7D99 /* MainViewController.m in Sources */,
-				8ABA132818D5D46E007A7D99 /* FlipsideViewController.m in Sources */,
 				8ABA131818D5D46E007A7D99 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +476,7 @@
 				8ABA134218D5D46E007A7D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8ABA134318D5D46E007A7D99 /* Build configuration list for PBXNativeTarget "Due2Tests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				8ABA134518D5D46E007A7D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
