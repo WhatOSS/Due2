@@ -11,5 +11,6 @@
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
+-(int)add:(int)firstNum plus:(int)secondNum;
 
 @end

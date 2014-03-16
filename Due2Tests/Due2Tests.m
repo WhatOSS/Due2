@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+#import "MainViewController.h"
+
 @interface Due2Tests : XCTestCase
 
 @end
@@ -26,9 +28,11 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testAddReturnsSumOfArgs
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    MainViewController *controller = [[MainViewController alloc] init];
+    int result = [controller add:1 plus:1];
+    XCTAssertEqual(result, 2, @"FORMAT ME");
 }
 
 @end

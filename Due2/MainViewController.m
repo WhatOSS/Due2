@@ -8,10 +8,6 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
-
-@end
-
 @implementation MainViewController
 
 - (void)viewDidLoad
@@ -28,13 +24,18 @@
 
 #pragma mark - Flipside View Controller
 
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
+- (void)flipsideViewControllerDidFinish: (FlipsideViewController *)controller
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         [self dismissViewControllerAnimated:YES completion:nil];
     } else {
         [self.flipsidePopoverController dismissPopoverAnimated:YES];
     }
+}
+
+- (int)add:(int)firstNum plus:(int)secondNum
+{
+    return firstNum + secondNum;
 }
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
